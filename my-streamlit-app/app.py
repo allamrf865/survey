@@ -36,4 +36,4 @@ with col2:
 st.markdown("---")
 
 # ========================= 🔥 FOOTER ========================= #
-st.markdown("<h5 style='text-align: center; color: #888;'>🚀 Dibangun oleh Lammy Tutur Miaw</h5>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center; color: #888;'>🚀 Created by Lammy Tutur Miaw</h5>", unsafe_allow_html=True)
