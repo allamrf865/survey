@@ -25,7 +25,7 @@ st.markdown("<h3 style='text-align: center; color: #33FFBD;'>Visualisasi dan Ana
 st.markdown("---")
 
 # ========================= 🔥 LOAD DATA ========================= #
-data_file = "Sample_Data_Kuesioner__1000_Data_.csv"
+data_file = "my-streamlit-app/📂 data/Sample_Data_Kuesioner__1000_Data_.csv"
 if os.path.exists(data_file):
     df = pd.read_csv(data_file)
     st.success("✅ Data terbaru telah dimuat!")
