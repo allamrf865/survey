@@ -12,10 +12,10 @@ st.markdown("---")
 # ========================= 🔥 NAVIGASI VIA SIDEBAR ========================= #
 st.sidebar.title("🔍 Navigasi Aplikasi")
 
-# Gunakan st.page_link() untuk navigasi yang lebih aman
-st.sidebar.page_link("pages/home", label="🏠 Home")
-st.sidebar.page_link("pages/form", label="📝 Isi Form")
-st.sidebar.page_link("pages/dashboard", label="📊 Dashboard")
+# Gunakan hanya nama file tanpa "pages/" di dalam page_link
+st.sidebar.page_link("home", label="🏠 Home")
+st.sidebar.page_link("form", label="📝 Isi Form")
+st.sidebar.page_link("dashboard", label="📊 Dashboard")
 
 st.sidebar.markdown("---")
 st.sidebar.success("📍 Pilih halaman di sidebar untuk mulai eksplorasi!")
