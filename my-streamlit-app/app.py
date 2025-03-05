@@ -12,14 +12,10 @@ st.markdown("---")
 # ========================= 🔥 NAVIGASI VIA SIDEBAR ========================= #
 st.sidebar.title("🔍 Navigasi Aplikasi")
 
-if st.sidebar.button("🏠 Home"):
-    st.switch_page("home")  # ✅ Tanpa "pages/"
-
-if st.sidebar.button("📝 Isi Form"):
-    st.switch_page("form")  # ✅ Tanpa "pages/"
-
-if st.sidebar.button("📊 Dashboard"):
-    st.switch_page("dashboard")  # ✅ Tanpa "pages/"
+# Gunakan st.page_link() untuk navigasi yang lebih aman
+st.sidebar.page_link("pages/home", label="🏠 Home")
+st.sidebar.page_link("pages/form", label="📝 Isi Form")
+st.sidebar.page_link("pages/dashboard", label="📊 Dashboard")
 
 st.sidebar.markdown("---")
 st.sidebar.success("📍 Pilih halaman di sidebar untuk mulai eksplorasi!")
@@ -31,13 +27,13 @@ col1, col2 = st.columns(2)
 
 with col1:
     if st.button("📝 Isi Form Kuesioner"):
-        st.switch_page("form")  # ✅ Tanpa "pages/"
+        st.switch_page("form")  # ✅ Pastikan nama file ada di folder `pages/`
 
 with col2:
     if st.button("📊 Lihat Dashboard Analitik"):
-        st.switch_page("dashboard")  # ✅ Tanpa "pages/"
+        st.switch_page("dashboard")  # ✅ Pastikan nama file ada di folder `pages/`
 
 st.markdown("---")
 
 # ========================= 🔥 FOOTER ========================= #
-st.markdown("<h5 style='text-align: center; color: #888;'>🚀 Created by Lammy Tutur Miaw</h5>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center; color: #888;'>🚀 Dibangun oleh Lammy Tutur Miaw</h5>", unsafe_allow_html=True)
