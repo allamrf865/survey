@@ -5,7 +5,7 @@ import os
 # ========================= 🔥 KONFIGURASI HALAMAN ========================= #
 st.set_page_config(page_title="Dashboard Home", layout="wide")
 
-# CSS Styling untuk memperindah UI
+# CSS Styling untuk UI
 st.markdown("""
     <style>
         .main-title {
@@ -38,14 +38,23 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# HEADER UTAMA
+# ========================= 🔥 HEADER ========================= #
 st.markdown("<h1 class='main-title'>📊 Dashboard Analisis Kuesioner</h1>", unsafe_allow_html=True)
 st.markdown("<h3 class='sub-title'>Dapatkan insight terbaik dari data kuesioner secara otomatis</h3>", unsafe_allow_html=True)
 
 st.markdown("---")
 
+# ========================= 🔥 NAVIGASI SIDEBAR ========================= #
+st.sidebar.title("🔍 Navigasi Aplikasi")
+st.sidebar.page_link("home", label="🏠 Home")
+st.sidebar.page_link("form", label="📝 Isi Form")
+st.sidebar.page_link("dashboard", label="📊 Dashboard")
+
+st.sidebar.markdown("---")
+st.sidebar.success("📍 Pilih halaman di sidebar untuk mulai eksplorasi!")
+
 # ========================= 🔥 RINGKASAN DATA (STATISTIK) ========================= #
-data_file = "data/sample_data.csv"
+data_file = "my-streamlit-app/data/Sample_Data_Kuesioner__1000_Data_.csv"
 if os.path.exists(data_file):
     df = pd.read_csv(data_file)
     st.success("✅ Data terbaru telah dimuat!")
@@ -69,7 +78,7 @@ if os.path.exists(data_file):
 else:
     st.warning("⚠️ Data belum tersedia. Silakan isi kuesioner terlebih dahulu.")
 
-# ========================= 🔥 NAVIGASI ========================= #
+# ========================= 🔥 NAVIGASI KE HALAMAN LAIN ========================= #
 st.subheader("🔍 Ayo Mulai Analisis!")
 st.markdown("**Klik tombol di bawah untuk memasukkan data kuesioner atau melihat analisis lengkap!**")
 
@@ -77,13 +86,13 @@ colA, colB = st.columns(2)
 
 with colA:
     if st.button("📝 Isi Form Kuesioner"):
-        st.switch_page("pages/form.py")
+        st.switch_page("form")  # ✅ Tanpa "pages/"
 
 with colB:
     if st.button("📊 Lihat Dashboard Analitik"):
-        st.switch_page("pages/dashboard.py")
+        st.switch_page("dashboard")  # ✅ Tanpa "pages/"
 
 st.markdown("---")
 
 # ========================= 🔥 FOOTER ========================= #
-st.markdown("<h5 class='footer'>🚀 Dibangun dengan 💙 oleh Lammy Tutut Miaw 🌍</h5>", unsafe_allow_html=True)
+st.markdown("<h5 class='footer'>🚀 Created by Lammy Tutur Miaw </h5>", unsafe_allow_html=True)
