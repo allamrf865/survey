@@ -61,9 +61,9 @@ st.subheader("🔍 Lanjutkan ke Analisis Data")
 st.markdown("**Setelah mengisi kuesioner, lanjutkan ke halaman dashboard untuk melihat hasil analisis.**")
 
 if st.button("📊 Lihat Dashboard Analitik"):
-    st.switch_page("pages/dashboard.py")
+    st.switch_page("dashboard")  # ✅ PERBAIKAN: Hanya gunakan nama file tanpa ekstensi dan tanpa "pages/"
 
 st.markdown("---")
 
 # FOOTER
-st.markdown("<h5 style='text-align: center; color: #888;'>🚀 Dibangun dengan 💙 oleh Lammy Tutut Miaw 🌍</h5>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center; color: #888;'>🚀 Created by Lammy Tutur Miaw</h5>", unsafe_allow_html=True)
